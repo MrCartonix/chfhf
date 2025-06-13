@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать объявление | TON Sticker Marketplace</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/tonweb@0.0.62/dist/tonweb.js"></script>
+    <script src="https://unpkg.com/@tonconnect/sdk@latest/dist/tonconnect-sdk.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TON Sticker Market</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Marketplace</a>
+                <a href="create.html" class="nav-link active">Создать объявление</a>
+            </nav>
+            <div id="ton-connect"></div>
+            <div id="wallet-address"></div>
+        </header>
+        <main>
+            <section id="add-pack">
+                <h2>Загрузить свой стикер-пак</h2>
+                <form id="pack-form">
+                    <input type="text" placeholder="Название пака" name="packName" required>
+                    <input type="url" placeholder="Ссылка на Telegram pack" name="tgLink" required>
+                    <input type="number" placeholder="Тираж (лимит NFT)" name="supply" min="1" required>
+                    <input type="number" placeholder="Цена (TON)" name="price" min="0.1" step="0.01" required>
+                    <input type="file" name="sticker" accept="image/png, image/webp, image/jpeg" required>
+                    <button type="submit">Создать NFT-пак</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.pageType = "create";
+    </script>
+</body>
+</html>

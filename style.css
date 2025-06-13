@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9f9fb;
+    color: #222;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 32px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(60, 90, 150, 0.12);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0088cc;
+    margin: 0;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #0088cc;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: background 0.18s;
+}
+.nav-link.active, .nav-link:hover {
+    background: #e5f7ff;
+}
+
+#connect-wallet {
+    display: none;
+}
+
+#ton-connect {
+    min-width: 180px;
+    margin-left: 20px;
+}
+
+#add-pack, #marketplace {
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input, button[type="submit"] {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background: #0088cc;
+    color: #fff;
+    border: none;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #005b91;
+}
+
+#packs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 28px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.pack-card {
+    background: #f2f3f6;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(60, 90, 150, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: flex-start;
+    min-width: 0;
+    width: 100%;
+}
+
+.pack-card img {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-right: 18px;
+}
+
+.pack-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pack-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.pack-link {
+    color: #0088cc;
+    font-size: 0.97rem;
+    text-decoration: underline;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+.pack-actions {
+    display: flex;
+    gap: 9px;
+}
+
+@media (max-width: 800px) {
+    .container { max-width: 99vw; padding: 10px;}
+    #packs-list { grid-template-columns: 1fr; }
+    .pack-card { flex-direction: column; align-items: flex-start; }
+}
